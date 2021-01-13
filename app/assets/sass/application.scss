@@ -1,0 +1,95 @@
+// global styles for <a> and <p> tags
+$govuk-global-styles: true;
+
+// We can't mount GOV.UK Frontend's assets at root as it's done automatically by the extensions framework.
+$govuk-assets-path: '/govuk/assets/';
+
+// Import GOV.UK Frontend and any extension styles if extensions have been configured
+@import "lib/extensions/extensions";
+
+// Patterns that aren't in Frontend
+@import "patterns/step-by-step-header";
+@import "patterns/step-by-step-nav";
+@import "patterns/step-by-step-related";
+@import "patterns/task-list";
+@import "patterns/related-items";
+
+// Components that aren't in Frontend
+@import "components/cookie-banner";
+
+// Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
+
+$navigation-height: 50px;
+
+.app-navigation {
+  @include govuk-font(19, $weight: bold);
+  box-sizing: border-box;
+  width: 200%;
+  height: 50px;
+  background-color: govuk-colour("light-grey");
+
+  @include govuk-media-query($until: tablet) {
+    display: none;
+  }
+  z-index: 2;
+}
+.app-navigation::after {
+    padding-left: 1000px;
+    margin-left: -1000px;
+    width: 0px;
+    background-color: govuk-colour("light-grey");
+    z-index: 1;
+    height: 50px;
+    position: relative;
+    top:-50px;
+}
+
+.app-navigation__list {
+  position: relative;
+  left: -(govuk-spacing(3));
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.app-navigation__list-item {
+  box-sizing: border-box;
+  display: block;
+  position: relative;
+  height: $navigation-height;
+  padding: 0 govuk-spacing(3);
+  float: left;
+  line-height: $navigation-height;
+}
+
+.app-navigation__list-item--current {
+  border-bottom: 4px solid govuk-colour("blue");
+}
+
+.app-navigation__link {
+  @include govuk-typography-weight-bold;
+  text-decoration: none;
+
+  &:not(:focus):visited {
+    color: $govuk-link-colour;
+  }
+
+  &:not(:focus):hover {
+    color: $govuk-link-colour;
+    text-decoration: underline;
+  }
+
+  // Extend the touch area of the link to the list
+  &:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+}
+
+.app-navigation__list-item--current .app-navigation__link:hover {
+  text-decoration: none;
+}

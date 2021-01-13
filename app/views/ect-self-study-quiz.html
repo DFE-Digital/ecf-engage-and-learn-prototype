@@ -1,17 +1,91 @@
 
 {% extends "layout.html" %}
 
+{% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
+{% from "govuk/components/checkboxes/macro.njk" import govukCheckboxes %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
 {% block pageTitle %}
   GOV.UK Prototype Kit
 {% endblock %}
 
 {% block content %}
 
+
+  {{ govukBreadcrumbs({
+    items: [
+      {
+        text: "Self study",
+        href: "#"
+      },
+      {
+        text: "Strand 1",
+        href: "#"
+      },
+      {
+        text: "Session 3",
+        href: "#"
+      }
+    ]
+  }) }}
+
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
+      <p class="govuk-hint">
+        Strand 1: Behaviour
+      </p>
       <h1 class="govuk-heading-xl">
-        Hello!
+        Quiz: Routines
       </h1>
+
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      </p>
+      {{ govukCheckboxes({
+        idPrefix: "waste",
+        name: "waste",
+        items: [
+          {
+            value: "",
+            text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+          },
+          {
+            value: "",
+            text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+          },
+          {
+            value: "",
+            text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+          }
+        ]
+      }) }}
+
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      </p>
+      {{ govukCheckboxes({
+        idPrefix: "waste",
+        name: "waste",
+        items: [
+          {
+            value: "",
+            text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+          },
+          {
+            value: "",
+            text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+          },
+          {
+            value: "",
+            text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+          }
+        ]
+      }) }}
+
+      {{ govukButton({
+        text: "Check your answers",
+        href: "/ect-self-study-quiz-answers"
+      }) }}
       
     </div>
   </div>

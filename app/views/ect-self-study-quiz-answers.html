@@ -1,17 +1,117 @@
 
 {% extends "layout.html" %}
 
+{% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
+{% from "govuk/components/checkboxes/macro.njk" import govukCheckboxes %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
 {% block pageTitle %}
   GOV.UK Prototype Kit
 {% endblock %}
 
 {% block content %}
 
+
+  {{ govukBreadcrumbs({
+    items: [
+      {
+        text: "Self study",
+        href: "#"
+      },
+      {
+        text: "Strand 1",
+        href: "#"
+      },
+      {
+        text: "Session 3",
+        href: "#"
+      }
+    ]
+  }) }}
+
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
+      <p class="govuk-hint">
+        Strand 1: Behaviour
+      </p>
       <h1 class="govuk-heading-xl">
-        Hello!
+        Quiz: Routines
       </h1>
+
+      <p class="grey-background results">
+        <strong>Results:</strong> You answered 1 question correctly, and 1 question wrong
+      </p>
+
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      </p>
+      <div>
+        <div class="govuk-!-display-inline-block" style="width: 50px;">
+          <img height=30 src="https://www.early-career-framework.education.gov.uk/ambition/wp-content/themes/early-career-framework/static/img/tick.png" alt="Your answer was correct">
+        </div>
+        <div class="govuk-!-display-inline-block">
+          <p class="govuk-hint answer-label">Correct answer:</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+        </div>
+      </div>
+      <div>
+        <div class="govuk-!-display-inline-block" style="width: 50px;">
+        </div>
+        <div class="govuk-!-display-inline-block">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+        </div>
+      </div>
+      <div>
+        <div class="govuk-!-display-inline-block" style="width: 50px;">
+        </div>
+        <div class="govuk-!-display-inline-block">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+        </div>
+      </div>
+
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      </p>
+      <div>
+        <div class="govuk-!-display-inline-block" style="width: 50px;">
+          <img height=30 src="https://www.early-career-framework.education.gov.uk/ambition/wp-content/themes/early-career-framework/static/img/cross.png" alt="Your answer was incorrect">
+        </div>
+        <div class="govuk-!-display-inline-block">
+          <p class="govuk-hint answer-label">Wrong answer:</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+        </div>
+      </div>
+      <div>
+        <div class="govuk-!-display-inline-block" style="width: 50px;">
+          <img height=30 src="https://www.early-career-framework.education.gov.uk/ambition/wp-content/themes/early-career-framework/static/img/tick.png" alt="Your answer was correct">
+        </div>
+        <div class="govuk-!-display-inline-block">
+          <p class="govuk-hint answer-label">Correct answer:</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+        </div>
+      </div>
+      <div>
+        <div class="govuk-!-display-inline-block" style="width: 50px;">
+        </div>
+        <div class="govuk-!-display-inline-block">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+        </div>
+      </div>
+
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      </p>
+
+      {{ govukButton({
+        text: "Take again",
+        href: "/ect-self-study-quiz"
+      }) }}
+      <br/>
+
+      {{ govukButton({
+        text: "Back to session",
+        href: "/ect-self-study-session"
+      }) }}
       
     </div>
   </div>

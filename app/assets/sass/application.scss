@@ -21,6 +21,18 @@ $govuk-assets-path: '/govuk/assets/';
 
 $navigation-height: 50px;
 
+.grey-background {
+  background-color: govuk-colour("light-grey");
+}
+.results{
+  padding: 20px 0 20px 10px;
+}
+.answer-label {
+  margin-left: -5px;
+  margin-bottom: 5px;
+  font-size: medium;
+}
+
 .app-navigation {
   @include govuk-font(19, $weight: bold);
   box-sizing: border-box;

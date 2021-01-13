@@ -1,5 +1,8 @@
 
 {% extends "layout.html" %}
+{% from "govuk/components/back-link/macro.njk" import govukBackLink %}
+{% from "govuk/components/checkboxes/macro.njk" import govukCheckboxes %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
 
 {% block pageTitle %}
   GOV.UK Prototype Kit
@@ -8,18 +11,77 @@
 {% block content %}
   {% include "includes/header-self-study-materials-current.html" %}
 
-  {% from "govuk/components/back-link/macro.njk" import govukBackLink %}
-  {{ govukBackLink({
-    text: "Back",
-    href: "/ect-dashboard-first-half-term"
-  }) }}
-
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-      <h1 class="govuk-heading-xl">
-        Hello!
-      </h1>
+      {{ govukBackLink({
+        text: "Back",
+        href: "/ect-dashboard-first-half-term"
+      }) }}
+
+      <p class="govuk-!-margin-bottom-2">Module1: Name of Module</p>
+
+      <h2 class="govuk-heading-l">
+        Name of session
+      </h2>
+
+      <iframe width="500" height="281" 
+        src="https://www.youtube.com/embed/EpjSlCJtPLo?enablejsapi=1&amp;origin=https%3A%2F%2Fwww.early-career-framework.education.gov.uk" 
+        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </p>
+
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </p>
+
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </p>
       
+      <h3 class="govuk-heading-m" id="check-your-understanding">
+        Check your understanding
+      </h3>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      </p>
+
+      {{ govukButton({
+        text: "Take quiz",
+        href: "/ect-self-study-quiz"
+      }) }}
+
+      <h3 class="govuk-heading-m">
+        Reflect
+      </h3>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </p>
+
+      <h3 class="govuk-heading-m">
+        That's the end of session one.
+      </h3>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      </p>
+
+      {{ govukCheckboxes({
+        idPrefix: "waste",
+        name: "waste",
+        items: [
+          {
+            value: "",
+            text: "I feel confident that I've read and understood session one"
+          }
+        ]
+      }) }}
+
+      {{ govukButton({
+        text: "Complete session",
+        href: "/ect-dashboard-first-half-term-updated"
+      }) }}
+
     </div>
   </div>
 

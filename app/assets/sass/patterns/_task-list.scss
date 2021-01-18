@@ -51,6 +51,8 @@
   @include govuk-media-query($from: 450px) {
     float: left;
   }
+
+  width: calc(100% - 150px);
 }
 
 // The `app-task-list__task-completed` class was previously used on the task

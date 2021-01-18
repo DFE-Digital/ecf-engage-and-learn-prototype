@@ -11,73 +11,103 @@
 
 {% block content %}
 
+{% include "includes/header-home-current.html" %}
 
-  {{ govukBreadcrumbs({
-    items: [
-      {
-        text: "Self study",
-        href: "#"
-      },
-      {
-        text: "Strand 1",
-        href: "#"
-      },
-      {
-        text: "Session 3",
-        href: "#"
-      }
-    ]
-  }) }}
+
+{{ govukBackLink({
+text: "Back",
+href: "/ect-self-study-session"
+}) }}
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-      <p class="govuk-hint">
-        Strand 1: Behaviour
-      </p>
       <h1 class="govuk-heading-xl">
-        Quiz: Routines
+        Quiz: Addressing persistent and challenging behaviour
       </h1>
 
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-      </p>
+      <h3 class="govuk-heading-m">
+        What reasons might a pupil be off task, despite clear instructions and modelling?
+      </h3>
+      <div id="waste-hint" class="govuk-hint">
+        Select the correct answer(s).
+      </div>
       {{ govukCheckboxes({
         idPrefix: "waste",
         name: "waste",
         items: [
           {
             value: "",
-            text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+            text: "The pupil is struggling with self-regulation."
           },
           {
             value: "",
-            text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+            text: "The pupil is confident with the instructions."
           },
           {
             value: "",
-            text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+            text: "The pupil is worried they will not be successful at the task."
+          },
+          {
+            value: "",
+            text: "The pupil is confident with the task.."
           }
         ]
       }) }}
 
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-      </p>
+      <h3 class="govuk-heading-m">
+        What is an example of positive framing?
+      </h3>
+      <div id="waste-hint" class="govuk-hint">
+        Select the correct answer(s).
+      </div>
       {{ govukCheckboxes({
         idPrefix: "waste",
         name: "waste",
         items: [
           {
             value: "",
-            text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+            text: "“I can see the blue table has all their pens out.”"
           },
           {
             value: "",
-            text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+            text: "“I have nearly 100% of the class there.”"
           },
           {
             value: "",
-            text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+            text: "We should all be sat with our legs crossed."
+          },
+          {
+            value: "",
+            text: "The blue table isn’t quite there yet."
+          }
+        ]
+      }) }}
+
+      <h3 class="govuk-heading-m">
+        Which of the following corrections is positively framed?
+      </h3>
+      <div id="waste-hint" class="govuk-hint">
+        Select the correct answer(s).
+      </div>
+      {{ govukCheckboxes({
+        idPrefix: "waste",
+        name: "waste",
+        items: [
+          {
+            value: "",
+            text: "“Why have the back row not got their pens out?”"
+          },
+          {
+            value: "",
+            text: "“I am still waiting as people are not following my instructions.”"
+          },
+          {
+            value: "",
+            text: "Pens down, eyes on me."
+          },
+          {
+            value: "",
+            text: "Everybody should have their book open on page 13 with their finder points on the first work, ready for reading"
           }
         ]
       }) }}
@@ -86,7 +116,7 @@
         text: "Check your answers",
         href: "/ect-self-study-quiz-answers"
       }) }}
-      
+
     </div>
   </div>
 

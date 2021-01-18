@@ -11,21 +11,59 @@
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-      <h2 class="govuk-heading-l">
-        Year 1
-      </h2>
+      <p>
+        Here are the study materials for the topics you’ll cover during your 2-year induction. You’ll do one topic a term, broken down into sessions taking between 30 minutes and 1 hour 30 minutes to complete.
+      </p>
+  <br>
 
-      <h3 class="govuk-heading-l">
-        Welcome
-      </h3>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-      </p>
-      <p>
-        <a href="/ect-welcome-to-ecf">
-          More introductory content
-        </a>
-      </p>
+      <ol class="app-task-list">
+        <li>
+          <h1 class="govuk-heading-xl">
+            First year of induction
+          </h1>
+          <h2 class="govuk-heading-l">
+            Autumn term
+          </h2>
+          <h3 class="govuk-heading-m">
+            How can you create an effective learning environment?
+          </h3>
+          <p>
+          During your first term as an early career teacher you’ll explore what effective learning environments look like and strategies you can use to achieve them.
+          </p>
+
+          <p>
+            <a href="">
+              What you will learn with video introduction
+            </a>
+          </p>
+
+          <p><strong>Topic materials</strong></p>
+
+
+
+
+          <ul class="app-task-list__items">
+
+            {% set session_list_emement_title = "Establishing effective routines (50 minutes)" %}
+            {% include "includes/session-list-element-complete.html" %}
+
+            {% set session_list_emement_title = "Creating a positive and respectful classroom environment (30 minutes)" %}
+            {% include "includes/session-list-element-complete.html" %}
+
+            {% set session_list_emement_title = "Addressing low-level behaviour (40 minutes)" %}
+            {% include "includes/session-list-element-complete.html" %}
+
+            {% set session_list_emement_title = "Addressing persistent and challenging behaviour (50 minutes)" %}
+            {% include "includes/session-list-element-in-progress.html" %}
+
+            {% set session_list_emement_title = "Developing pupils’ intrinsic motivation (40 minutes)" %}
+            {% include "includes/session-list-element-not-started.html" %}
+
+            {% set session_list_emement_title = "Holding high expectations and maintaining engagement (50 minutes)" %}
+            {% include "includes/session-list-element-not-started.html" %}
+          </ul>
+        </li>
+      </ol>
 
       <ol class="app-task-list">
         <li>
@@ -83,23 +121,23 @@
       </h2>
       <ol class="app-task-list">
         {% set session_module_title = "Half term 1" %}
-        {% include "includes/session-list-half-term-cannot-start.html" %}    
+        {% include "includes/session-list-half-term-cannot-start.html" %}
 
         {% set session_module_title = "Half term 2" %}
-        {% include "includes/session-list-half-term-cannot-start.html" %}    
+        {% include "includes/session-list-half-term-cannot-start.html" %}
 
         {% set session_module_title = "Half term 3" %}
-        {% include "includes/session-list-half-term-cannot-start.html" %}    
+        {% include "includes/session-list-half-term-cannot-start.html" %}
 
         {% set session_module_title = "Half term 4" %}
-        {% include "includes/session-list-half-term-cannot-start.html" %}    
+        {% include "includes/session-list-half-term-cannot-start.html" %}
 
         {% set session_module_title = "Half term 5" %}
-        {% include "includes/session-list-half-term-cannot-start.html" %}    
+        {% include "includes/session-list-half-term-cannot-start.html" %}
 
         {% set session_module_title = "Half term 6" %}
-        {% include "includes/session-list-half-term-cannot-start.html" %}   
-      </ol> 
+        {% include "includes/session-list-half-term-cannot-start.html" %}
+      </ol>
     </div>
   </div>
 

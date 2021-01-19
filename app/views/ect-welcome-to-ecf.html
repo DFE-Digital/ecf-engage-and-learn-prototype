@@ -5,9 +5,11 @@
   GOV.UK Prototype Kit
 {% endblock %}
 
-{% block content %}
-
+{% block navigation %}
 {% include "includes/header-none-current.html" %}
+{% endblock %}
+
+{% block content %}
 
 {% from "govuk/components/back-link/macro.njk" import govukBackLink %}
 {{ govukBackLink({

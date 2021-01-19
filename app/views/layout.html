@@ -39,6 +39,12 @@
   GOV.UK Prototype Kit
 {% endblock %}
 
+
+
+{% set mainClasses = mainClasses | default("govuk-main-wrapper--auto-spacing") %}
+
+{% set mainClasses = mainClasses +(" custom-wrapper") %}
+
 {% block header %}
   {% include "includes/cookie-banner.html" %}
   {# Set serviceName in config.js. #}
@@ -48,13 +54,29 @@
     serviceUrl: "/",
     containerClasses: "govuk-width-container"
   }) }}
+  <div class="govuk-width-container {{mainClasses}}">
+
+  {% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+    {{ govukPhaseBanner({
+      tag: {
+        text: "alpha"
+      },
+      html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+    }) }}
+  </div>
+
+    <nav class="app-navigation govuk-clearfix govuk-!-margin-bottom-4">
+      <div class="govuk-width-container {{mainClasses}} govuk-grid-row">
+        {% block navigation %}
+        {% include "includes/header-none-current.html" %}
+        {% endblock %}
+      </div>
+    </nav>
 
 {% endblock %}
 
 
-{% set mainClasses = mainClasses | default("govuk-main-wrapper--auto-spacing") %}
 
-{% set mainClasses = mainClasses +(" custom-wrapper") %}
 
 {% if useAutoStoreData %}
   {% block footer %}

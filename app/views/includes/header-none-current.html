@@ -1,37 +1,25 @@
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-full">
 
-    {% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
-    {{ govukPhaseBanner({
-      tag: {
-        text: "alpha"
-      },
-      html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
-    }) }}
+<nav class="app-navigation govuk-clearfix govuk-!-margin-bottom-4">
+  <ul class="app-navigation__list app-width-container">
 
-    <nav class="app-navigation govuk-clearfix govuk-!-margin-bottom-4">
-      <ul class="app-navigation__list app-width-container">
+    <li class="app-navigation__list-item">
+      <a class="govuk-link govuk-link--no-visited-state app-navigation__link" href="/ect-dashboard-first-half-term" data-topnav="Home">Home</a>
+    </li>
 
-        <li class="app-navigation__list-item">
-          <a class="govuk-link govuk-link--no-visited-state app-navigation__link" href="/ect-dashboard-first-half-term" data-topnav="Home">Home</a>
-        </li>
+    <li class="app-navigation__list-item">
+      <a class="govuk-link govuk-link--no-visited-state app-navigation__link" href="/ect-self-study-all-content" data-topnav="Self Study Material">Self Study Material</a>
+    </li>
 
-        <li class="app-navigation__list-item">
-          <a class="govuk-link govuk-link--no-visited-state app-navigation__link" href="/ect-self-study-all-content" data-topnav="Self Study Material">Self Study Material</a>
-        </li>
+    <li class="app-navigation__list-item">
+      <a class="govuk-link govuk-link--no-visited-state app-navigation__link" href="#" data-topnav="Assignments/Mentor sessions">Mentor sessions</a>
+    </li>
 
-        <li class="app-navigation__list-item">
-          <a class="govuk-link govuk-link--no-visited-state app-navigation__link" href="#" data-topnav="Assignments/Mentor sessions">Mentor sessions</a>
-        </li>
+    <li class="app-navigation__list-item" style="float: right;">
+      <a class="govuk-link govuk-link--no-visited-state app-navigation__link" href="/ect-self-study-all-content" data-topnav="Self Study Material">Your account</a>
+    </li>
 
-        <li class="app-navigation__list-item">
-          <a class="govuk-link govuk-link--no-visited-state app-navigation__link" href="/ect-self-study-all-content" data-topnav="Self Study Material">Your account</a>
-        </li>
-
-        <li class="app-navigation__list-item">
-          <a class="govuk-link govuk-link--no-visited-state app-navigation__link" href="/ect-self-study-all-content" data-topnav="Self Study Material">Sign out</a>
-        </li>
-      </ul>
-    </nav>
-  </div>
-</div>
+    <li class="app-navigation__list-item" style="float: right;">
+      <a class="govuk-link govuk-link--no-visited-state app-navigation__link" href="/ect-self-study-all-content" data-topnav="Self Study Material">Sign out</a>
+    </li>
+  </ul>
+</nav>

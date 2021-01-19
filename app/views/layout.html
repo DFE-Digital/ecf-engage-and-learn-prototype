@@ -65,13 +65,9 @@
     }) }}
   </div>
 
-    <nav class="app-navigation govuk-clearfix govuk-!-margin-bottom-4">
-      <div class="govuk-width-container {{mainClasses}} govuk-grid-row">
-        {% block navigation %}
-        {% include "includes/header-none-current.html" %}
-        {% endblock %}
-      </div>
-    </nav>
+  {% block navigation %}
+  {% endblock %}
+
 
 {% endblock %}
 

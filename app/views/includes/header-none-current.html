@@ -1,9 +1,14 @@
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-full">
-    <p class="govuk-!-margin-bottom-2">Joe Bloggs</p>
-    <h1 class="govuk-heading-xl govuk-!-margin-bottom-4">
-      Early Career Framework
-    </h1>
+
+    {% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+    {{ govukPhaseBanner({
+      tag: {
+        text: "alpha"
+      },
+      html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+    }) }}
+
     <nav class="app-navigation govuk-clearfix govuk-!-margin-bottom-4">
       <ul class="app-navigation__list app-width-container">
 
@@ -17,6 +22,14 @@
 
         <li class="app-navigation__list-item">
           <a class="govuk-link govuk-link--no-visited-state app-navigation__link" href="#" data-topnav="Assignments/Mentor sessions">Mentor sessions</a>
+        </li>
+
+        <li class="app-navigation__list-item">
+          <a class="govuk-link govuk-link--no-visited-state app-navigation__link" href="/ect-self-study-all-content" data-topnav="Self Study Material">Your account</a>
+        </li>
+
+        <li class="app-navigation__list-item">
+          <a class="govuk-link govuk-link--no-visited-state app-navigation__link" href="/ect-self-study-all-content" data-topnav="Self Study Material">Sign out</a>
         </li>
       </ul>
     </nav>

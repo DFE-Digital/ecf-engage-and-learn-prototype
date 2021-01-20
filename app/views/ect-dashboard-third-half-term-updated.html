@@ -1,0 +1,72 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block navigation %}
+{% include "includes/header-home-current.html" %}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+<br>
+
+<ol class="app-task-list">
+  <li>
+    <h1 class="govuk-heading-xl">
+      Spring term
+    </h1>
+    <p>
+      This is what you'll study during the first half-term of your induction. The topics are broken down into sessions taking between 30 minutes and 1 hour 30 minutes to complete.
+    </p>
+    <h2 class="govuk-heading-l">
+      First half term
+    </h2>
+    <h3 class="govuk-heading-m">
+      How can you create an effective learning environment?
+    </h3>
+    <p>
+    During your first term as an early career teacher you’ll explore what effective learning environments look like and strategies you can use to achieve them.
+    </p>
+
+    <p>
+      <a href="">
+        What you will learn with video introduction
+      </a>
+    </p>
+
+    <p><strong>Topic materials</strong></p>
+
+
+
+
+    <ul class="app-task-list__items">
+
+      {% set session_list_emement_title = "Establishing effective routines (50 minutes)" %}
+      {% include "includes/session-list-element-complete.html" %}
+
+      {% set session_list_emement_title = "Creating a positive and respectful classroom environment (30 minutes)" %}
+      {% include "includes/session-list-element-complete.html" %}
+
+      {% set session_list_emement_title = "Addressing low-level behaviour (40 minutes)" %}
+      {% include "includes/session-list-element-complete.html" %}
+
+      {% set session_list_emement_title = "Addressing persistent and challenging behaviour (50 minutes)" %}
+      {% include "includes/session-list-element-complete-after.html" %}
+
+      {% set session_list_emement_title = "Developing pupils’ intrinsic motivation (40 minutes)" %}
+      {% include "includes/session-list-element-not-started.html" %}
+
+      {% set session_list_emement_title = "Holding high expectations and maintaining engagement (50 minutes)" %}
+      {% include "includes/session-list-element-not-started.html" %}
+    </ul>
+  </li>
+</ol>
+    </div>
+  </div>
+
+{% endblock %}

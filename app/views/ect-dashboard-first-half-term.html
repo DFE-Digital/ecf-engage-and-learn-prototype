@@ -6,7 +6,7 @@
 {% endblock %}
 
 {% block navigation %}
-{% include "includes/header-home-current.html" %}
+{% include "includes/header-home-current-first.html" %}
 {% endblock %}
 
 {% block content %}
@@ -30,12 +30,11 @@
             First half term
           </h2>
           <h3 class="govuk-heading-m">
-            How can you create an effective learning environment?
+            How do pupils learn?
           </h3>
           <p>
-          During your first term as an early career teacher you’ll explore what effective learning environments look like and strategies you can use to achieve them.
+          During the spring term you’ll focus on how pupils learn effectively and how this can positively impact your teaching.
           </p>
-
           <p>
             <a href="">
               What you will learn with video introduction
@@ -50,16 +49,16 @@
           <ul class="app-task-list__items">
 
             {% set session_list_emement_title = "Establishing effective routines (50 minutes)" %}
-            {% include "includes/session-list-element-complete.html" %}
+            {% include "includes/session-list-element-not-started.html" %}
 
             {% set session_list_emement_title = "Creating a positive and respectful classroom environment (30 minutes)" %}
-            {% include "includes/session-list-element-complete.html" %}
+            {% include "includes/session-list-element-not-started.html" %}
 
             {% set session_list_emement_title = "Addressing low-level behaviour (40 minutes)" %}
-            {% include "includes/session-list-element-complete.html" %}
+            {% include "includes/session-list-element-not-started.html" %}
 
             {% set session_list_emement_title = "Addressing persistent and challenging behaviour (50 minutes)" %}
-            {% include "includes/session-list-element-in-progress.html" %}
+            {% include "includes/session-list-element-not-started.html" %}
 
             {% set session_list_emement_title = "Developing pupils’ intrinsic motivation (40 minutes)" %}
             {% include "includes/session-list-element-not-started.html" %}
@@ -69,6 +68,8 @@
           </ul>
         </li>
       </ol>
+
+      <p><a href="/index">Back to landing page</a></p>
     </div>
   </div>
 

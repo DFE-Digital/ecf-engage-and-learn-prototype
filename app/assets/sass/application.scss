@@ -24,6 +24,18 @@ $navigation-height: 50px;
 .grey-background {
   background-color: govuk-colour("light-grey");
 }
+
+.blue-background {
+  background-color: govuk-colour("dark-blue");
+}
+
+.white-text {
+  color: govuk-colour("white");
+}
+
+.border-dark-blue {
+    border: 5px solid govuk-colour("dark-blue");
+}
 .results{
   padding: 20px 0 20px 10px;
 }

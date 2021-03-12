@@ -23,7 +23,7 @@
 
 
   <p class="govuk-body govuk-!-font-size-19 govuk-!-margin-bottom-2">Contents</p>
-      
+
   <ul class="govuk-list">
     <li>
       – <span>Intended outcomes</span>
@@ -61,41 +61,49 @@
   "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
 </p>
 
-<h2 class="govuk-heading-l">That's the end of the session</h2>
+<form class="form" action="/finish-session-answer" method="post">
 
-{% from "govuk/components/radios/macro.njk"        import govukRadios %}
+  <div class="govuk-form-group">
+  <fieldset class="govuk-fieldset">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+      <h2 class="govuk-fieldset__heading">
+        That's the end of the session
+      </h2>
+    </legend>
 
-{{ govukRadios({
-  idPrefix: "changed-name",
-  name: "changed-name",
+    <p><a href="#" class="govuk-link">Download session content (PDF)</a></p>
 
+    <br>
 
-  items: [
-    {
-      value: "yes",
-      text: "I feel confident that I’ve read and understood this session"
-    },
-    {
-      value: "no",
-      text: "I would like more time on this session and will revist"
-    },
-    {
-      value: "no_no_no",
-      text: "There are sections that I don’t understand and would like
-      to discuss with my mentor"
-    }
-  ]
-}) }}
+    <h3 class="govuk-heading-m">How did you find that session?</h3>
 
-<p>
-  <a href="#" class="govuk-link">Download session content (PDF)</a>
-</p>
+    <div class="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="finish-session" name="finish-session" type="radio" value="yes">
+        <label class="govuk-label govuk-radios__label" for="finish-session">
+          Yes
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="finish-session-2" name="finish-session" type="radio" value="more-time">
+        <label class="govuk-label govuk-radios__label" for="finish-session-2">
+          More time
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="finish-session-3" name="finish-session" type="radio" value="discussion">
+        <label class="govuk-label govuk-radios__label" for="finish-session-3">
+          Discussion
+        </label>
+      </div>
+    </div>
 
-<p>
-  Once you click End Session your reflections will be able to view via the self study dashboard. Your mentor will also be able to access these ahead of your weekly meetings also.
-</p>
+  </fieldset>
+</div>
 
-<a class="govuk-button">End session</a>
+  <button class="govuk-button" data-module="govuk-button">End session</button>
+
+</form>
 
 <nav class="gem-c-pagination" role="navigation" aria-label="Pagination">
   <ul class="gem-c-pagination__list" data-module="track-click">

@@ -1,0 +1,36 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/url/of/previous/page">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <div class="govuk-panel govuk-panel--confirmation">
+        <h1 class="govuk-panel__title">
+          Account creation complete
+        </h1>
+      </div>
+
+      <h3 class="govuk-heading-m">What happens next?</h3>
+      <p>You now go to your home page to start accessing the self-study materials. When you sign in in the future you will only need to provide your email address.</p>
+
+<a href="/it4/home" class="govuk-button">Go to your home page</a>
+
+
+
+
+
+
+    </div>
+  </div>
+
+{% endblock %}

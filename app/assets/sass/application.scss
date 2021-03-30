@@ -85,6 +85,43 @@ $navigation-height: 50px;
   @include govuk-typography-weight-bold;
   text-decoration: none;
 
+  .app-navigation-year {
+    @include govuk-font(19, $weight: bold);
+    box-sizing: border-box;
+    height: 50px;
+
+
+    @include govuk-media-query($until: tablet) {
+      display: none;
+    }
+    z-index: 2;
+  }
+
+  .app-navigation-year__list {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .app-navigation-year__list-item {
+    box-sizing: border-box;
+    display: block;
+    position: relative;
+    height: $navigation-height;
+    padding: 0 govuk-spacing(3);
+    float: left;
+    line-height: $navigation-height;
+  }
+
+  .app-navigation-year__list-item--current {
+    border-bottom: 4px solid govuk-colour("blue");
+  }
+
+  .app-navigation-year__link {
+    @include govuk-typography-weight-bold;
+    text-decoration: none;
+
   &:not(:focus):visited {
     color: $govuk-link-colour;
   }
@@ -93,6 +130,8 @@ $navigation-height: 50px;
     color: $govuk-link-colour;
     text-decoration: underline;
   }
+
+
 
   // Extend the touch area of the link to the list
   &:after {

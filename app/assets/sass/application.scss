@@ -121,6 +121,7 @@ $navigation-height: 50px;
   .app-navigation-year__link {
     @include govuk-typography-weight-bold;
     text-decoration: none;
+  }
 
   &:not(:focus):visited {
     color: $govuk-link-colour;

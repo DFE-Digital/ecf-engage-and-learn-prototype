@@ -15,19 +15,32 @@ GOV.UK Prototype Kit
 
     <h1 class="govuk-heading-xl">Sign in</h1>
 
-    <form class="form" action="/it4/prefer-name-2" method="post">
-      <div class="govuk-form-group">
-        <label class="govuk-label" for="email">
-          Email address
-        </label>
-        <span id="national-insurance-number-error" class="govuk-error-message">
-          <span class="govuk-visually-hidden">Error: </span>Enter your school email
-        </span>
-        <input class="govuk-input govuk-!-width-two-thirds" id="email" name="email" type="text">
-      </div>
+    <div class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1" data-module="govuk-error-summary">
+  <h2 class="govuk-error-summary__title" id="error-summary-title">
+    There is a problem
+  </h2>
+  <div class="govuk-error-summary__body">
+    <ul class="govuk-list govuk-error-summary__list">
+      <li>
+        <a href="#name">Your email address is not recognised</a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="govuk-form-group govuk-form-group--error">
+  <label class="govuk-label" for="name">
+    Email address
+  </label>
+  <span id="name-error" class="govuk-error-message">
+    <span class="govuk-visually-hidden">Error:</span> Enter a recognised email
+  </span>
+  <input class="govuk-input govuk-input--error" id="name" name="name" type="text" aria-describedby="name-error"></div>
+
+
       <br>
 
-      <h3 class="govuk-heading-m">Problems signing in</h3>
+      <h3 class="govuk-heading-m">Why your email might not be recognised</h3>
       <ul class="govuk-list govuk-list--bullet">
         <li>If you are an induction tutor you need to go to the
           <a href="/it4/home">Manage training for early career teachers</a> service to sign in.

@@ -3,48 +3,37 @@ const router = express.Router()
 
 
 router.post('/finish-session-answer', function (req, res) {
+  const finishSession = req.session.data['finish-session']
 
-  // Make a variable and give it the value from 'how-many-balls'
-  var lessonPart4 = req.session.data['finish-session']
-
-  // Check whether the variable matches a condition
-  if (lessonPart4 == "yes") {
-    // Send user to next page
+  if (finishSession === "yes") {
     res.redirect('/it3/lesson-list-complete')
-  }
-
-  if (lessonPart4 == "discussion") {
-    // Send user to next page
+  } else if (finishSession === "discussion") {
     res.redirect('/it3/lesson-list-discussion')
-  }
-  else {
-    // Send user to ineligible page
+  } else {
     res.redirect('/it3/lesson-list')
   }
+})
 
+router.post('/it4/prefer-name-2', function (req, res) {
+  const email = req.session.data['email']
+
+  if (email == "error") {
+    res.redirect('/it4/sign-in-error')
+  } else {
+    res.redirect('/it4/prefer-name')
+  }
 })
 
 router.post('/finish-session-answer-it4', function (req, res) {
+  const finishSession = req.session.data['finish-session']
 
-  // Make a variable and give it the value from 'how-many-balls'
-  var lessonPart4 = req.session.data['finish-session']
-
-  // Check whether the variable matches a condition
-  if (lessonPart4 == "yes") {
-    // Send user to next page
+  if (finishSession === "yes") {
     res.redirect('/it4/lesson-list-complete')
-  }
-
-  if (lessonPart4 == "discussion") {
-    // Send user to next page
+  } else if (finishSession === "discussion") {
     res.redirect('/it4/lesson-list-todo')
-  }
-  else {
-    // Send user to ineligible page
+  } else {
     res.redirect('/it4/lesson-list-inprogress')
   }
-
 })
-// Add your routes here - above the module.exports line
 
 module.exports = router

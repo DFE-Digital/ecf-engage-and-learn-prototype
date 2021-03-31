@@ -1,24 +1,20 @@
-
 {% extends "layout_it4.html" %}
 
 {% block pageTitle %}
-  GOV.UK Prototype Kit
+GOV.UK Prototype Kit
 {% endblock %}
 
 {% block navigation %}
 <div class="govuk-width-container {{mainClasses}} govuk-grid-row blue-background govuk-!-margin-bottom-6">
-  <div class="govuk-grid-column-one-third">
-  <br>
-
-<h1 class="govuk-heading-xl white-text govuk-!-margin-bottom-9 govuk-!-margin-top-3">Welcome Joe</h1>
-<br>
-<p><a href="/it4/prefer-name"class="white-text">Your mentor's role and responsibilities</a></p>
-</div>
-<p><a href="/it4/prefer-name">Edit name</a></p>
+  <div class="govuk-grid-column-two-thirds">
+    <div class="flex-wrapper">
+      <h1 class="govuk-heading-xl white-text govuk-!-margin-bottom-0 govuk-!-margin-top-5">Welcome Joe</h1>
+      <p class="govuk-!-margin-bottom-0 govuk-!-margin-left-3"><a href="/it4/prefer-name" class="white-text bold">Edit name</a></p>
+    </div>
+    <p class="govuk-!-margin-top-5"><a href="/it4/prefer-name" class="white-text bold">Your mentor's role and responsibilities</a></p>
+  </div>
 </div>
 {% endblock %}
-
-
 
 {% block content %}
 
@@ -56,13 +52,4 @@
 <p><a href="#">Your mentor's role and responsibilities</a></p>
 
 <p><a href="#">Get support with using the platform</a></p>
-
-
-
-
-
-
-
-<br>
-
 {% endblock %}

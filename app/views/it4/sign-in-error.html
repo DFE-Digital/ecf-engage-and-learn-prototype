@@ -1,50 +1,46 @@
-
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  GOV.UK Prototype Kit
+GOV.UK Prototype Kit
 {% endblock %}
 
 {% block beforeContent %}
-  <a class="govuk-back-link" href="/url/of/previous/page">Back</a>
+<a class="govuk-back-link" href="/url/of/previous/page">Back</a>
 {% endblock %}
 
 {% block content %}
 
-  <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
 
-      <h1 class="govuk-heading-xl">Sign in</h1>
+    <h1 class="govuk-heading-xl">Sign in</h1>
 
-      <form class="form" action="/it4/prefer-name" method="post">
+    <form class="form" action="/it4/prefer-name-2" method="post">
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="email">
+          Email address
+        </label>
+        <span id="national-insurance-number-error" class="govuk-error-message">
+          <span class="govuk-visually-hidden">Error: </span>Enter your school email
+        </span>
+        <input class="govuk-input govuk-!-width-two-thirds" id="email" name="email" type="text">
+      </div>
+      <br>
 
-        <div class="govuk-form-group">
-  <label class="govuk-label" for="two-thirds">
-    Email address
-  </label>
-  <span id="national-insurance-number-error" class="govuk-error-message">
-    <span class="govuk-visually-hidden">Error:</span> Enter a National Insurance number in the correct format
-  </span>
-  <input class="govuk-input govuk-!-width-two-thirds" id="two-thirds" name="two-thirds" type="text"></div>
-<br>
-  <h3 class="govuk-heading-m">Problems signing in</h3>
-  <ul class="govuk-list govuk-list--bullet">
-    <li>If you are an induction tutor you need to go to the
-      <a href="/it4/home">Manage training for early career teachers</a> service to sign in.
-    </li>
-    <li>
-      If you are an early career teacher or mentor check that you have the same email that the induction coordinator used when adding you to the service,
-    </li>
+      <h3 class="govuk-heading-m">Problems signing in</h3>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>If you are an induction tutor you need to go to the
+          <a href="/it4/home">Manage training for early career teachers</a> service to sign in.
+        </li>
+        <li>
+          If you are an early career teacher or mentor check that you have the same email that the induction coordinator
+          used when adding you to the service,
+        </li>
+      </ul>
 
-    </ul>
-
-
-
-  <button class="govuk-button" data-module="govuk-button">Continue</button>
-
-      </form>
-
-    </div>
+      <button class="govuk-button" data-module="govuk-button">Continue</button>
+    </form>
   </div>
+</div>
 
 {% endblock %}

@@ -37,9 +37,9 @@ router.post('/finish-session-answer-it4', function (req, res) {
 })
 
 router.post('/guidance-question-answer', function (req, res) {
-  const finishSession = req.session.data['read-guidance']
+  const readGuidance = req.session.data['read-guidance']
 
-  if (finishSession === "yes") {
+  if (readGuidance === "yes") {
     res.redirect('/it4/guidance')
   } else {
     res.redirect('/it4/home')

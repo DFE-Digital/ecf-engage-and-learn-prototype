@@ -36,4 +36,14 @@ router.post('/finish-session-answer-it4', function (req, res) {
   }
 })
 
+router.post('/guidance-question-answer', function (req, res) {
+  const finishSession = req.session.data['read-guidance']
+
+  if (finishSession === "yes") {
+    res.redirect('/it4/guidance')
+  } else {
+    res.redirect('/it4/home')
+  }
+})
+
 module.exports = router

@@ -46,4 +46,36 @@ router.post('/guidance-question-answer', function (req, res) {
   }
 })
 
+router.post('/dev/create-username', function (req, res) {
+  const email = req.session.data['email']
+
+  if (email === "error") {
+    res.redirect('/dev/sign-in-error')
+  } else {
+    res.redirect('/dev/create-username')
+  }
+})
+
+router.post('/finish-session-answer-dev', function (req, res) {
+  const finishSession = req.session.data['finish-session']
+
+  if (finishSession === "yes") {
+    res.redirect('/dev/lesson-list-complete')
+  } else if (finishSession === "discussion") {
+    res.redirect('/dev/lesson-list-todo')
+  } else {
+    res.redirect('/dev/lesson-list-inprogress')
+  }
+})
+
+router.post('/guidance-question-answer-dev', function (req, res) {
+  const readGuidance = req.session.data['read-guidance']
+
+  if (readGuidance === "yes") {
+    res.redirect('/dev/guidance')
+  } else {
+    res.redirect('/dev/home')
+  }
+})
+
 module.exports = router

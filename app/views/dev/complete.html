@@ -1,0 +1,49 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/url/of/previous/page">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <div class="govuk-panel govuk-panel--confirmation">
+        <h1 class="govuk-panel__title">
+          Account creation complete
+        </h1>
+      </div>
+
+      <br>
+
+      <h3 class="govuk-heading-m">What happens next?</h3>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>
+          When you sign in in the future you will only need to provide your email address.
+        </li>
+        <li>
+          Before you start the self study materials please read our short guidance about the training and support you will read during your induction</li>
+      </ul>
+
+<br>
+      <div class="govuk-button-group">
+  <a href="/dev/guidance" class="govuk-button">Read guidance</a>
+</div>
+
+
+
+
+
+
+
+    </div>
+  </div>
+
+{% endblock %}

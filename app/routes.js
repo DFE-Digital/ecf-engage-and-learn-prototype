@@ -14,13 +14,13 @@ router.post('/finish-session-answer', function (req, res) {
   }
 })
 
-router.post('/it4/prefer-name-2', function (req, res) {
+router.post('/it4/create-username', function (req, res) {
   const email = req.session.data['email']
 
   if (email === "error") {
     res.redirect('/it4/sign-in-error')
   } else {
-    res.redirect('/it4/prefer-name-2')
+    res.redirect('/it4/create-username')
   }
 })
 

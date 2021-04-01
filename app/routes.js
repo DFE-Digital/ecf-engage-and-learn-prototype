@@ -20,7 +20,7 @@ router.post('/it4/prefer-name-2', function (req, res) {
   if (email == "error") {
     res.redirect('/it4/sign-in-error')
   } else {
-    res.redirect('/it4/prefer-name')
+    res.redirect('/it4/prefer-name-2')
   }
 })
 

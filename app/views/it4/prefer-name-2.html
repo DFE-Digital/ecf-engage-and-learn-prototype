@@ -18,11 +18,14 @@
 
       <form class="form" action="/it4/guidance-question" method="post">
 
-        <div class="govuk-form-group">
-  <label class="govuk-label" for="two-thirds">
-    Username
-  </label>
-  <input class="govuk-input govuk-!-width-two-thirds" id="two-thirds" name="two-thirds" type="text"></div>
+        {{ govukInput({
+          label: {
+            text: "Username"
+              },
+            classes: "govuk-!-width-two-thirds",
+            id: "username",
+            name: "username"
+        }) }}
 
 
         <button class="govuk-button" data-module="govuk-button">Continue</button>

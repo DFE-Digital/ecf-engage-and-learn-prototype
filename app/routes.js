@@ -19,6 +19,7 @@ router.post('/it4/create-username', function (req, res) {
 
   if (email === "error") {
     res.redirect('/it4/sign-in-error')
+
   } else {
     res.redirect('/it4/create-username')
   }
@@ -46,11 +47,13 @@ router.post('/guidance-question-answer', function (req, res) {
   }
 })
 
-router.post('/dev/create-username', function (req, res) {
+router.post('/dev/create-username', function(req, res) {
   const email = req.session.data['email']
 
   if (email === "error") {
     res.redirect('/dev/sign-in-error')
+  } else if (!email) {
+    res.redirect('/dev/sign-in-error-none')
   } else {
     res.redirect('/dev/create-username')
   }

@@ -54,6 +54,8 @@ router.post('/dev/create-username', function(req, res) {
     res.redirect('/dev/sign-in-error')
   } else if (!email) {
     res.redirect('/dev/sign-in-error-none')
+  } else if (email === "format") {
+    res.redirect('/dev/sign-in-error-format')
   } else {
     res.redirect('/dev/create-username')
   }

@@ -47,7 +47,7 @@ router.post('/guidance-question-answer', function (req, res) {
   }
 })
 
-router.post('/dev/create-username', function(req, res) {
+router.post('/dev/home', function(req, res) {
   const email = req.session.data['email']
 
   if (email === "error") {
@@ -57,7 +57,7 @@ router.post('/dev/create-username', function(req, res) {
   } else if (email === "format") {
     res.redirect('/dev/sign-in-error-format')
   } else {
-    res.redirect('/dev/create-username')
+    res.redirect('/dev/home')
   }
 })
 

@@ -11,28 +11,31 @@
 
 {% block content %}
 
-  <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
 
-      <h1 class="govuk-heading-xl">Edit your username</h1>
+    <h1 class="govuk-heading-xl">Edit your name </h1>
 
-      <form class="form" action="/dev/home" method="post">
+    <form class="form" action="/dev/home-name" method="post">
 
-        {{ govukInput({
-          label: {
-            text: "Username"
-              },
-            classes: "govuk-!-width-two-thirds",
-            id: "username",
-            name: "username"
-        }) }}
+      {{ govukInput({
+            label: {
+              text: "What is your preferred name?"
+                },
+                hint: {
+                  text: "For example, Jess rather than Jessica."
+                },
+              classes: "govuk-!-width-two-thirds",
+              id: "username",
+              name: "username"
+          }) }}
 
 
-        <button class="govuk-button" data-module="govuk-button">Save</button>
+      <button class="govuk-button" data-module="govuk-button">Save</button>
 
-      </form>
+    </form>
 
-    </div>
   </div>
+</div>
 
 {% endblock %}

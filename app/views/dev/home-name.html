@@ -1,4 +1,4 @@
-{% extends "layout_it4.html" %}
+{% extends "layout_dev.html" %}
 
 {% block pageTitle %}
 GOV.UK Prototype Kit
@@ -10,37 +10,16 @@ GOV.UK Prototype Kit
     <div class="flex-wrapper">
       <h1 class="govuk-heading-xl white-text govuk-!-margin-bottom-0 govuk-!-margin-top-5">Welcome {{ data['username'] }}</h1>
     </div>
-    <p class="govuk-!-margin-top-1 govuk-!-margin-bottom-9 govuk-body govuk-!-font-size-16"><a href="/it4/change-username" class="white-text bold">Edit name</a></p>
+    <p class="govuk-!-margin-top-1 govuk-!-margin-bottom-9 govuk-body govuk-!-font-size-16"><a href="/dev/change-username" class="white-text bold">Edit name</a></p>
   </div>
 </div>
 {% endblock %}
 
 {% block content %}
 
-<h2 class="govuk-heading-l">Modules progress overview</h2>
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-one-third-from-desktop">
-    <div style="background-color:#F3F2F1; padding: 10px;">
-      <h1 class="govuk-heading-xl govuk-!-margin-bottom-1">1</h1>
-      <p class="govuk-!-margin-bottom-1">Session done</p>
-    </div>
-  </div>
-  <div class="govuk-grid-column-one-third-from-desktop">
-    <div style="background-color:#F3F2F1; padding: 10px;">
-      <h1 class="govuk-heading-xl govuk-!-margin-bottom-1">0</h1>
-      <p class="govuk-!-margin-bottom-1">Modules completed</p>
-    </div>
-  </div>
-  <div class="govuk-grid-column-one-third-from-desktop">
-    <div style="background-color:#F3F2F1; padding: 10px;">
-      <h1 class="govuk-heading-xl govuk-!-margin-bottom-1">8</h1>
-      <p class="govuk-!-margin-bottom-1">Modules to complete</p>
-    </div>
-  </div>
-</div>
 
 <br>
-<a href="/it4/module-list" class="govuk-button">Go to your module materials</a>
+<a href="/dev/module-list" class="govuk-button">Go to your module materials</a>
 
 <h2 class="govuk-heading-l govuk-!-margin-top-4">Related content</h2>
 

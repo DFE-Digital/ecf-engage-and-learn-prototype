@@ -68,6 +68,8 @@ router.post('/finish-session-answer-dev', function (req, res) {
     res.redirect('/dev/lesson-list-complete')
   } else if (finishSession === "discussion") {
     res.redirect('/dev/lesson-list-todo')
+  } else if (!finishSession) {
+    res.redirect('/dev/lesson-error')
   } else {
     res.redirect('/dev/lesson-list-inprogress')
   }

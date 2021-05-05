@@ -1,0 +1,119 @@
+
+{% extends "layout_dev.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-breadcrumbs ">
+  <ol class="govuk-breadcrumbs__list">
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="/dev/home">Home</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="/dev/module-list">The Early Career Framework materials</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="/dev/lesson-list">First Autumn half-term - Enabling pupil learning</a>
+    </li>
+  </ol>
+</div>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl govuk-!-margin-top-2 govuk-!-margin-bottom-2">Week 3 - establishing the learning environment</h1>
+      <p class="govuk-body govuk-!-font-size-19 govuk-!-margin-bottom-7">This session will take you approximately <strong>45 minutes</strong> to complete</p>
+
+  <p class="govuk-body govuk-!-font-size-19 govuk-!-margin-bottom-2">Contents</p>
+
+<ul class="govuk-list">
+  <li>
+    – <a class="govuk-link" href="/dev/lesson-part1">Introduction and intended outcomes</a>
+  </li>
+  <li>
+    – <a class="govuk-link" href="/dev/lesson-part2">Research and practice summary</a>
+  </li>
+  <li>
+    – <a class="govuk-link" href="/dev/lesson-part3">Plan and theory into practice</a>
+  </li>
+  <li>
+    – <span>Next steps and conclusion of session</span>
+  </li>
+</ul>
+
+<h2 class="govuk-heading-l">Next steps and conclusion of session</h2>
+<form class="form" action="/finish-session-answer-dev" method="post">
+
+  <div class="govuk-form-group">
+  <fieldset class="govuk-fieldset">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+    </legend>
+
+    <p>Bring your notes from this activity to your next mentor meeting. Be ready to discuss this activity with your mentor. Use your learning in this session to make at least one positive change to how you establish the learning environment in your lessons over the coming week.</p>
+
+
+    <br>
+
+    <h3 class="govuk-heading-m">Have you finished and understood the session?</h3>
+
+    <div class="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="finish-session" name="finish-session" type="radio" value="yes">
+        <label class="govuk-label govuk-radios__label" for="finish-session">
+          I feel confident that I’ve read and understood this session
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="finish-session-2" name="finish-session" type="radio" value="more-time">
+        <label class="govuk-label govuk-radios__label" for="finish-session-2">
+          I would like more time on this session and will either revisit or pick up with my mentor
+        </label>
+      </div>
+      <div class="govuk-radios__divider">or</div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="finish-session-3" name="finish-session" type="radio" value="discussion">
+        <label class="govuk-label govuk-radios__label" for="finish-session-3">
+          I am just browsing and have yet to properly look at this session
+        </label>
+      </div>
+    </div>
+
+  </fieldset>
+</div>
+
+  <button class="govuk-button" data-module="govuk-button">End session</button>
+
+</form>
+
+<nav class="gem-c-pagination" role="navigation" aria-label="Pagination">
+  <ul class="gem-c-pagination__list" data-module="track-click">
+      <li class="gem-c-pagination__item gem-c-pagination__item--previous">
+        <a href="/dev/lesson-part3" class="gem-c-pagination__link">
+          <span class="gem-c-pagination__link-title">
+            <svg class="gem-c-pagination__link-icon" xmlns="http://www.w3.org/2000/svg" height="13" width="17" viewBox="0 0 17 13">
+              <path d="m6.5938-0.0078125-6.7266 6.7266 6.7441 6.4062 1.377-1.449-4.1856-3.9768h12.896v-2h-12.984l4.2931-4.293-1.414-1.414z"></path>
+            </svg>
+            <span class="gem-c-pagination__link-text">
+              Previous
+            </span>
+          </span>
+            <span class="gem-c-pagination__link-divider visually-hidden">:</span>
+            <span class="gem-c-pagination__link-label">Plan and theory into practice</span>
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+
+  </div>
+
+
+
+  </div>
+
+{% endblock %}

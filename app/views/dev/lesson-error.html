@@ -20,9 +20,23 @@
     </li>
   </ol>
 </div>
+<br>
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
+
+      <div class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1" data-module="govuk-error-summary">
+    <h2 class="govuk-error-summary__title" id="error-summary-title">
+      There is a problem
+    </h2>
+    <div class="govuk-error-summary__body">
+      <ul class="govuk-list govuk-error-summary__list">
+        <li>
+          <a href="#finish-session">Select if you have finished the session</a>
+        </li>
+      </ul>
+    </div>
+  </div>
 
       <h1 class="govuk-heading-xl govuk-!-margin-top-2 govuk-!-margin-bottom-2">Week 3 - establishing the learning environment</h1>
       <p class="govuk-body govuk-!-font-size-19 govuk-!-margin-bottom-7">This session will take you approximately <strong>45 minutes</strong> to complete</p>
@@ -57,28 +71,35 @@
 
     <br>
 
-    <h3 class="govuk-heading-m">Have you finished and understood the session?</h3>
+    <div class="govuk-form-group govuk-form-group--error">
+      <fieldset class="govuk-fieldset" aria-describedby="finish-session-hint finish-session-error">
+          <h3 class="govuk-heading-m">Have you finished and understood the session?</h3>
+        <span id="finish-session-error" class="govuk-error-message">
+          <span class="govuk-visually-hidden">Error:</span>Select if you have finished the session
+        </span>
+        <div class="govuk-radios">
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="finish-session" name="finish-session" type="radio" value="yes">
+            <label class="govuk-label govuk-radios__label" for="finish-session">
+              I feel confident that I’ve read and understood this session
+            </label>
+          </div>
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="finish-session-2" name="finish-session" type="radio" value="more-time">
+            <label class="govuk-label govuk-radios__label" for="finish-session-2">
+              I would like more time on this session and will either revisit or pick up with my mentor
+            </label>
+          </div>
+          <div class="govuk-radios__divider">or</div>
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="finish-session-3" name="finish-session" type="radio" value="discussion">
+            <label class="govuk-label govuk-radios__label" for="finish-session-3">
+              I am just browsing and have yet to properly look at this session
+            </label>
+          </div>
+        </div>
 
-    <div class="govuk-radios">
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="finish-session" name="finish-session" type="radio" value="yes">
-        <label class="govuk-label govuk-radios__label" for="finish-session">
-          I feel confident that I’ve read and understood this session
-        </label>
-      </div>
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="finish-session-2" name="finish-session" type="radio" value="more-time">
-        <label class="govuk-label govuk-radios__label" for="finish-session-2">
-          I would like more time on this session and will either revisit or pick up with my mentor
-        </label>
-      </div>
-      <div class="govuk-radios__divider">or</div>
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="finish-session-3" name="finish-session" type="radio" value="discussion">
-        <label class="govuk-label govuk-radios__label" for="finish-session-3">
-          I am just browsing and have yet to properly look at this session
-        </label>
-      </div>
+      </fieldset>
     </div>
 
   </fieldset>

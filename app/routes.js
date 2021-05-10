@@ -47,7 +47,7 @@ router.post('/guidance-question-answer', function (req, res) {
   }
 })
 
-router.post('/dev/home', function(req, res) {
+router.post('/dev/cip', function(req, res) {
   const email = req.session.data['email']
 
   if (email === "error") {
@@ -57,21 +57,21 @@ router.post('/dev/home', function(req, res) {
   } else if (email === "format") {
     res.redirect('/dev/sign-in-error-format')
   } else {
-    res.redirect('/dev/home')
+    res.redirect('/dev/cip')
   }
 })
 
-router.post('/finish-session-answer-dev', function (req, res) {
+router.post('/finish-session-answer-dev-ucl', function (req, res) {
   const finishSession = req.session.data['finish-session']
 
   if (finishSession === "yes") {
-    res.redirect('/dev/lesson-list-complete')
+    res.redirect('/dev/ucl/lesson-list-complete')
   } else if (finishSession === "discussion") {
-    res.redirect('/dev/lesson-list-todo')
+    res.redirect('/dev/ucl/lesson-list-todo')
   } else if (!finishSession) {
-    res.redirect('/dev/lesson-error')
+    res.redirect('/dev/ucl/lesson-error')
   } else {
-    res.redirect('/dev/lesson-list-inprogress')
+    res.redirect('/dev/ucl/lesson-list-inprogress')
   }
 })
 

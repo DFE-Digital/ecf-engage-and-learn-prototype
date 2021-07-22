@@ -1,0 +1,54 @@
+{% extends "layout_nqt.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/nqt1/it1/start">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl govuk-!-margin-top-4">Would you like to use DfE accredited materials to support last year's NQTs?</h1>
+
+      <form class="form" action="/nqt1/it1/choose" method="post">
+
+        <div class="govuk-form-group">
+  <fieldset class="govuk-fieldset">
+    <div class="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="nqts" name="nqts" type="radio" value="yes">
+        <label class="govuk-label govuk-radios__label" for="nqts">
+          Yes
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="nqts-2" name="nqts" type="radio" value="no-support">
+        <label class="govuk-label govuk-radios__label" for="nqts-2">
+          No, we will support our NQTs another way
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="nqts-3" name="nqts" type="radio" value="no-nqts">
+        <label class="govuk-label govuk-radios__label" for="nqts-3">
+          No, we don't have any NQTs
+        </label>
+      </div>
+    </div>
+
+  </fieldset>
+</div>
+
+
+      <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

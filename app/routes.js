@@ -1,6 +1,23 @@
 const express = require('express')
 const router = express.Router()
 
+router.post('/nqt1/it1/question-answer', function (req, res) {
+
+  // Make a variable and give it the value from 'how-many-balls'
+  var jugglingBalls = req.session.data['nqts']
+
+  // Check whether the variable matches a condition
+  if (jugglingBalls == "yes") {
+    // Send user to next page
+    res.redirect('/nqt1/it1/choose')
+  }
+  else {
+    // Send user to ineligible page
+    res.redirect('/nqt1/it1/no')
+  }
+
+})
+
 
 router.post('/finish-session-answer', function (req, res) {
   const finishSession = req.session.data['finish-session']

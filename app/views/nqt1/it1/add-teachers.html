@@ -33,7 +33,7 @@
           <label class="govuk-label" for="full-name">
             Full name
           </label>
-          <input class="govuk-input govuk-!-width-full" id="full-name" name="full-name" type="text" autocomplete="full-name"></div>
+          <input class="govuk-input govuk-!-width-full" id="full-name" name="full-name" type="text" autocomplete="full-name" value="{{ data['full-name'] }}"></div>
 
         <div class="govuk-form-group">
           <label class="govuk-label" for="email-address">
@@ -42,7 +42,7 @@
           <div id="event-name-hint" class="govuk-hint">
               You can use their personal or work email address
             </div>
-          <input class="govuk-input govuk-!-width-full" id="email-address" name="email-address" type="text" autocomplete="email-address"></div>
+          <input class="govuk-input govuk-!-width-full" id="email-address" name="email-address" type="text" autocomplete="email-address" value="{{ data['email-address'] }}"></div>
 
 
       </fieldset>

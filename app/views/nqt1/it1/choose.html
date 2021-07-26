@@ -15,7 +15,7 @@
 
       <h1 class="govuk-heading-xl govuk-!-margin-top-4">Which study materials would you like to use?</h1>
 
-      <p>You don't neccessarily need to choose the material that you chose before. If you are undecided you can read the <a href="https://manage-training-for-early-career-teachers.education.gov.uk/pages/core-materials-info">guidance about the different materials</a></p>
+      <p>You don't neccessarily need to choose the material that you chose before. If you are undecided you can read the <a href="https://manage-training-for-early-career-teachers.education.gov.uk/pages/core-materials-info" class="govuk-link" rel="noreferrer noopener" target="_blank">guidance about the different materials (opens in a new tab)</a></p>
 
       <details class="govuk-details" data-module="govuk-details">
   <summary class="govuk-details__summary">
@@ -34,25 +34,25 @@
   <fieldset class="govuk-fieldset">
     <div class="govuk-radios">
       <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="material" name="material" type="radio" value="Ambition Institute">
+        <input class="govuk-radios__input" id="material" name="material" type="radio" value="Ambition Institute" {{ checked("material", "Ambition Institute") }} >
         <label class="govuk-label govuk-radios__label" for="material">
           Ambition Institute
         </label>
       </div>
       <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="material-2" name="material" type="radio" value="Education Development Trust">
+        <input class="govuk-radios__input" id="material-2" name="material" type="radio" value="Education Development Trust" {{ checked("material", "Education Development Trust") }}>
         <label class="govuk-label govuk-radios__label" for="material-2">
           Education Development Trust
         </label>
       </div>
       <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="material-3" name="material" type="radio" value="Teach First">
+        <input class="govuk-radios__input" id="material-3" name="material" type="radio" value="Teach First" {{ checked("material", "Teach First") }}>
         <label class="govuk-label govuk-radios__label" for="material-3">
           Teach First
         </label>
       </div>
       <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="material-4" name="material" type="radio" value="University College London">
+        <input class="govuk-radios__input" id="material-4" name="material" type="radio" value="University College London" {{ checked("material", "University College London") }}>
         <label class="govuk-label govuk-radios__label" for="material-4">
           University College London
         </label>

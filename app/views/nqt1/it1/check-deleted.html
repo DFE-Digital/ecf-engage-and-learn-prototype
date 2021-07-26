@@ -1,11 +1,11 @@
-{% extends "layout.html" %}
+{% extends "layout_nqt.html" %}
 
 {% block pageTitle %}
   Check your answers
 {% endblock %}
 
 {% block beforeContent %}
-  <a class="govuk-back-link" href="/url/of/previous/page">Back</a>
+  <a class="govuk-back-link" href="/nqt1/it1/add-teachers">Back</a>
 {% endblock %}
 
 {% block content %}
@@ -22,7 +22,7 @@
             {{ data['material'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="#">
+            <a href="/nqt1/it1/choose">
               Change
               <span class="govuk-visually-hidden"> name</span>
             </a>
@@ -33,31 +33,30 @@
 
       <h3 class="govuk-heading-m">Teachers</h3>
 
-      <dl class="govuk-summary-list govuk-!-margin-bottom-6">
-      
-        <div class="govuk-summary-list__row">
+<dl class="govuk-summary-list govuk-!-margin-bottom-6">
+  <div class="govuk-summary-list__row">
 
-          <dd class="govuk-summary-list__value">
-            <div>{{ data['full-name-extra'] }}</div>
-            <div>{{ data['email-address-extra'] }}</div>
-          </dd>
+    <dd class="govuk-summary-list__value">
+      <div>{{ data['full-name-extra'] }}</div>
+      <div>{{ data['email-address-extra'] }}</div>
+    </dd>
 
 
-          <dd class="govuk-summary-list__actions govuk-!-margin-2">
-        <a href="#" class="govuk-!-margin-5">
-           Delete
-        </a>
-        <a href="#" class="govuk-!-right-margin-5">
-           Change
-        </a>
-      </dd>
-
+    <dd class="govuk-summary-list__actions govuk-!-margin-2">
+  <a href="#" class="govuk-!-margin-5">
+     Delete
+  </a>
+  <a href="/nqt1/it1/add-teachers-extra" class="govuk-!-right-margin-5">
+     Change
+  </a>
+  </dd>
 
 
 
-        </div>
 
-      </dl>
+  </div>
+
+</dl>
 
       <p><a href="/nqt1/it1/add-teachers-extra">Add another teacher</a></p>
 
@@ -65,7 +64,7 @@
 
       <p>Some copy here.</p>
 
-      <form action="/confirmation" method="post" novalidate>
+      <form action="/nqt1/it1/confirmation" method="post" novalidate>
 
         <input type="hidden" name="answers-checked" value="true">
 

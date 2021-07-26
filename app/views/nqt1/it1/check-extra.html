@@ -33,30 +33,48 @@
 
       <h3 class="govuk-heading-m">Teachers</h3>
 
-<dl class="govuk-summary-list govuk-!-margin-bottom-6">
-  <div class="govuk-summary-list__row">
+      <dl class="govuk-summary-list govuk-!-margin-bottom-6">
+        <div class="govuk-summary-list__row">
 
-    <dd class="govuk-summary-list__value">
-      <div>{{ data['full-name'] }}</div>
-      <div>{{ data['email-address'] }}</div>
-    </dd>
-
-
-    <dd class="govuk-summary-list__actions govuk-!-margin-2">
-  <a href="/nqt1/it1/delete" class="govuk-!-margin-5">
-     Delete
-  </a>
-  <a href="#" class="govuk-!-right-margin-5">
-     Change
-  </a>
-</dd>
+          <dd class="govuk-summary-list__value">
+            <div>{{ data['full-name'] }}</div>
+            <div>{{ data['email-address'] }}</div>
+          </dd>
 
 
+          <dd class="govuk-summary-list__actions govuk-!-margin-2">
+        <a href="/nqt1/it1/delete" class="govuk-!-margin-5">
+           Delete
+        </a>
+        <a href="#" class="govuk-!-right-margin-5">
+           Change
+        </a>
+      </dd>
+
+        </div>
+        <div class="govuk-summary-list__row">
+
+          <dd class="govuk-summary-list__value">
+            <div>{{ data['full-name-extra'] }}</div>
+            <div>{{ data['email-address-extra'] }}</div>
+          </dd>
 
 
-  </div>
+          <dd class="govuk-summary-list__actions govuk-!-margin-2">
+        <a href="#" class="govuk-!-margin-5">
+           Delete
+        </a>
+        <a href="#" class="govuk-!-right-margin-5">
+           Change
+        </a>
+      </dd>
 
-</dl>
+
+
+
+        </div>
+
+      </dl>
 
       <p><a href="/nqt1/it1/add-teachers-extra">Add another teacher</a></p>
 

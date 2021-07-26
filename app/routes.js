@@ -85,14 +85,6 @@ router.post('/guidance-question-answer-dev', function (req, res) {
   }
 })
 
-router.post('/question-answer', function (req, res) {
-  const readGuidance = req.session.data['nqts']
 
-  if (readGuidance === "yes") {
-    res.redirect('/nqt1/it1/choose')
-  } else {
-    res.redirect('/nqt1/it1/no')
-  }
-})
 
 module.exports = router

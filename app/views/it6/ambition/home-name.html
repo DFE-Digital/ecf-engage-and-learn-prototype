@@ -1,0 +1,28 @@
+{% extends "layout_it6.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+
+{% block navigation %}
+<div class="govuk-width-container {{mainClasses}} govuk-grid-row blue-background govuk-!-margin-bottom-6">
+  <div class="govuk-grid-column-two-thirds">
+    <div class="flex-wrapper">
+      <h1 class="govuk-heading-xl white-text govuk-!-margin-bottom-0 govuk-!-margin-top-5">Welcome {{ data['username'] }}</h1>
+    </div>
+    <p class="govuk-!-margin-top-1 govuk-!-margin-bottom-9 govuk-body govuk-!-font-size-16"><a href="/it6/ambition/change-username" class="white-text bold">Edit name</a></p>
+  </div>
+</div>
+{% endblock %}
+
+{% block content %}
+
+
+<br>
+<a href="/it6/ambition/module-list" class="govuk-button">Go to your module materials</a>
+
+<h2 class="govuk-heading-l govuk-!-margin-top-4">Related content</h2>
+
+<p><a href="/it6/ambition/guidance">Information about training and support during your induction</a></p>
+
+{% endblock %}

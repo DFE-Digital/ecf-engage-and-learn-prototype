@@ -15,36 +15,25 @@
 
       <h1 class="govuk-heading-xl govuk-!-margin-top-4 govuk-!-margin-bottom-4">Are you sure you want to delete {{ data['full-name'] }}?</h1>
 
-      <form class="form" action="/nqt1/it1/check-deleted" method="post">
 
         <div class="govuk-form-group">
   <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
 
-    <div id="changed-name-hint" class="govuk-hint">
-      You won't be able to undo this action and will have to input their details again
-    </div>
-    <div class="govuk-radios govuk-radios--inline">
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="changed-name" name="changed-name" type="radio" value="yes">
-        <label class="govuk-label govuk-radios__label" for="changed-name">
-          Yes
-        </label>
-      </div>
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="changed-name-2" name="changed-name" type="radio" value="no">
-        <label class="govuk-label govuk-radios__label" for="changed-name-2">
-          No
-        </label>
-      </div>
-    </div>
+    <p>You won't be able to undo this action and will have to input their details again</p>
 
   </fieldset>
 </div>
 
 
-      <button class="govuk-button" data-module="govuk-button">Confirm</button>
 
-      </form>
+<form class="form" action="/nqt1/it1/check-deleted" method="post">
+      <div class="govuk-button-group">
+
+    <input type="submit" name="commit" value="Delete" class="govuk-button govuk-button--warning">
+    <a class="govuk-link govuk-!-margin-top-2" href="/nqt1/it1/check">Cancel</a>
+
+</div>
+</form>
 
     </div>
   </div>

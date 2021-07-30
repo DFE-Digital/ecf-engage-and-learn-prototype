@@ -18,6 +18,18 @@ router.post('/nqt1/it1/question-answer', function (req, res) {
 
 })
 
+router.post('/dev/ambition/guidance-question-answer', function (req, res) {
+  const readGuidance = req.session.data['read-guidance']
+
+  if (readGuidance === "yes") {
+    res.redirect('/dev/ambition/guidance')
+      } else if  (readGuidance === "no") {
+      res.redirect('/dev/ambition/module-list')
+    } else if  (!readGuidance) {
+    res.redirect('/dev/ambition/guidance-question-error')
+    }
+})
+
 
 router.post('/finish-session-answer', function (req, res) {
   const finishSession = req.session.data['finish-session']

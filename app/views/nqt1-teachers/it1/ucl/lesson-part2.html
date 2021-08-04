@@ -1,0 +1,114 @@
+
+{% extends "layout_dev.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-breadcrumbs ">
+  <ol class="govuk-breadcrumbs__list">
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="/dev/ucl/home">Home</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="/dev/ucl/module-list">The Early Career Framework materials</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="/dev/ucl/lesson-list">First Autumn half-term - Enabling pupil learning</a>
+    </li>
+  </ol>
+</div>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl govuk-!-margin-top-2 govuk-!-margin-bottom-2">Week 3: establishing the learning environment</h1>
+      <p class="govuk-body govuk-!-font-size-19 govuk-!-margin-bottom-7">It should take around [X] minutes to complete the learning and exercises for this topic</p>
+
+  <p class="govuk-body govuk-!-font-size-19 govuk-!-margin-bottom-2">Contents</p>
+
+<ul class="govuk-list">
+  <li>
+    – <a class="govuk-link" href="/dev/ucl/lesson-part1">Introduction and intended outcomes</a>
+  </li>
+  <li>
+    – <span>Research and practice summary</span>
+  </li>
+  <li>
+    – <a class="govuk-link" href="/dev/ucl/lesson-part3">Plan and theory into practice</a>
+  </li>
+  <li>
+    – <a class="govuk-link" href="/dev/ucl/lesson-part4">Next steps</a>
+  </li>
+</ul>
+
+<h2 class="govuk-heading-l">Research and Practice Summary</h2>
+<p>You should spend about <strong>10 minutes on this section</strong></p>
+
+{% include "includes/paragraph.html" %}
+
+<h3 class="govuk-heading-m">Self-study activity: review </h3>
+
+<p>As you read, reflect on:</p>
+
+<ul class="govuk-list govuk-list--bullet">
+  <li>the practices that you are already doing well</li>
+  <li>the practices you are doing some of the time, but could do more of/more consistently</li>
+  <li>the practices you do not use in your teaching yet</li>
+</ul>
+
+{% include "includes/paragraph.html" %}
+<br>
+<br>
+{% include "includes/paragraph.html" %}
+<br>
+<br>
+{% include "includes/paragraph.html" %}
+<br>
+
+
+<nav class="gem-c-pagination" role="navigation" aria-label="Pagination">
+  <ul class="gem-c-pagination__list" data-module="track-click">
+      <li class="gem-c-pagination__item gem-c-pagination__item--previous">
+        <a href="/dev/ucl/lesson-part1" class="gem-c-pagination__link" rel="next">
+          <span class="gem-c-pagination__link-title">
+            <svg class="gem-c-pagination__link-icon" xmlns="http://www.w3.org/2000/svg" height="13" width="17" viewBox="0 0 17 13">
+              <path d="m6.5938-0.0078125-6.7266 6.7266 6.7441 6.4062 1.377-1.449-4.1856-3.9768h12.896v-2h-12.984l4.2931-4.293-1.414-1.414z"></path>
+            </svg>
+            <span class="gem-c-pagination__link-text">
+              Previous
+            </span>
+          </span>
+            <span class="gem-c-pagination__link-divider visually-hidden">:</span>
+            <span class="gem-c-pagination__link-label">Introduction and intended outcomes</span>
+        </a>
+      </li>
+      <li class="gem-c-pagination__item gem-c-pagination__item--next">
+        <a href="/dev/ucl/lesson-part3" class="gem-c-pagination__link" rel="next">
+          <span class="gem-c-pagination__link-title">
+            <svg class="gem-c-pagination__link-icon" xmlns="http://www.w3.org/2000/svg" height="13" width="17" viewBox="0 0 17 13">
+              <path d="m10.107-0.0078125-1.4136 1.414 4.2926 4.293h-12.986v2h12.896l-4.1855 3.9766 1.377 1.4492 6.7441-6.4062-6.7246-6.7266z"></path>
+            </svg>
+            <span class="gem-c-pagination__link-text">
+              Next
+            </span>
+          </span>
+            <span class="gem-c-pagination__link-divider visually-hidden">:</span>
+            <span class="gem-c-pagination__link-label">Plan and theory into practice</span>
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+
+  </div>
+
+
+
+  </div>
+
+{% endblock %}

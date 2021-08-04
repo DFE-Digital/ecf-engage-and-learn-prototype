@@ -1,0 +1,79 @@
+{% extends "layout_nqt.html" %}
+
+{% block pageTitle %}
+  Check your answers
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/nqt1/it2/add-teachers">Back</a>
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds-from-desktop">
+
+      <h1 class="govuk-heading-xl">Confirm details for Corfe Hills School</h1>
+
+      <h3 class="govuk-heading-m">Study materials</h3>
+
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+        <div class="govuk-summary-list__row">
+          <dd class="govuk-summary-list__value">
+            {{ data['material'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/nqt1/it2/choose">
+              Change
+              <span class="govuk-visually-hidden"> name</span>
+            </a>
+          </dd>
+        </div>
+
+      </dl>
+
+      <h3 class="govuk-heading-m">Teacher</h3>
+
+<dl class="govuk-summary-list govuk-!-margin-bottom-6">
+  <div class="govuk-summary-list__row">
+
+    <dd class="govuk-summary-list__value">
+      <div>{{ data['full-name'] }}</div>
+      <div>{{ data['email-address'] }}</div>
+    </dd>
+
+
+    <dd class="govuk-summary-list__actions govuk-!-margin-2">
+  <a href="/nqt1/it2/delete" class="govuk-!-margin-5">
+     Delete
+  </a>
+  <a href="/nqt1/it2/add-teachers" class="govuk-!-right-margin-5">
+     Change
+  </a>
+</dd>
+
+
+
+
+  </div>
+
+</dl>
+
+      <p><a href="/nqt1/it2/add-teachers-extra">Add another teacher</a></p>
+
+        <hr class="govuk-section-break govuk-section-break--l">
+
+
+
+      <form action="/nqt1/it2/confirmation" method="post" novalidate>
+
+        <input type="hidden" name="answers-checked" value="true">
+
+        <button type="submit" class="govuk-button" data-module="govuk-button">
+          Confirm
+        </button>
+
+      </form>
+
+    </div>
+  </div>
+{% endblock %}

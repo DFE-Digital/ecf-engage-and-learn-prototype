@@ -90,6 +90,20 @@ router.post('/dev/cip', function(req, res) {
   }
 })
 
+router.post('/nqt1-teachers/it1/cip', function(req, res) {
+  const email = req.session.data['email']
+
+  if (email === "error") {
+    res.redirect('/nqt1-teachers/it1/sign-in-error')
+  } else if (!email) {
+    res.redirect('/nqt1-teachers/it1/sign-in-error-none')
+  } else if (email === "format") {
+    res.redirect('/nqt1-teachers/it1/sign-in-error-format')
+  } else {
+    res.redirect('/nqt1-teachers/it1/cip')
+  }
+})
+
 router.post('/finish-session-answer-dev-ucl', function (req, res) {
   const finishSession = req.session.data['finish-session']
 

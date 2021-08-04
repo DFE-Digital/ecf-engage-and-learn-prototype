@@ -1,0 +1,67 @@
+{% extends "layout_nqt.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/nqt1/it2/choose">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl govuk-!-margin-top-4 govuk-!-margin-bottom-6">Choose which DfE-accredited materials you want to use for the 2020 cohort</h1>
+
+      <p>Check <a href="https://manage-training-for-early-career-teachers.education.gov.uk/pages/core-materials-info" class="govuk-link" rel="noreferrer noopener" target="_blank">our study materials summary (opens in a new tab)</a> if you’re not sure. </p>
+
+<hr class="govuk-section-break govuk-section-break--m">
+
+
+      <form class="form" action="/nqt1/it2/add-teachers" method="post">
+
+        <div class="govuk-form-group">
+  <fieldset class="govuk-fieldset">
+    <div class="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="material" name="material" type="radio" value="Ambition Institute" {{ checked("material", "Ambition Institute") }} >
+        <label class="govuk-label govuk-radios__label" for="material">
+          Ambition Institute
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="material-2" name="material" type="radio" value="Education Development Trust" {{ checked("material", "Education Development Trust") }}>
+        <label class="govuk-label govuk-radios__label" for="material-2">
+          Education Development Trust
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="material-3" name="material" type="radio" value="Teach First" {{ checked("material", "Teach First") }}>
+        <label class="govuk-label govuk-radios__label" for="material-3">
+          Teach First
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="material-4" name="material" type="radio" value="University College London" {{ checked("material", "University College London") }}>
+        <label class="govuk-label govuk-radios__label" for="material-4">
+          UCL Early Career Teacher Consortium
+        </label>
+      </div>
+
+    </div>
+
+
+  </fieldset>
+</div>
+
+
+      <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

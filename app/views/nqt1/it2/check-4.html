@@ -10,7 +10,7 @@
 
 {% block content %}
 <div class="govuk-grid-row">
-    <div class="govuk-grid-column-three-quarters-from-desktop">
+    <div class="govuk-grid-column-full-width-from-desktop">
 
       <h1 class="govuk-heading-xl">Confirm details for Corfe Hills School</h1>
 
@@ -18,36 +18,46 @@
 
 
 
-      <h3 class="govuk-heading-m">Chosen materials</h3>
+      <h3 class="govuk-heading-m">Study materials</h3>
 
-      <table class="govuk-table">
+      <dl class="govuk-summary-list">
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Provider
+    </dt>
+    <dd class="govuk-summary-list__value">
+      {{ data['material'] }}
+    </dd>
+    <dd class="govuk-summary-list__actions">
+      <a class="govuk-link" href="#">
+        Change <span class="govuk-visually-hidden">provider</span>
+      </a>
+    </dd>
+  </div>
+</dl>
 
-  <thead class="govuk-table__head">
-    <tr class="govuk-table__row">
-      <th scope="col" class="govuk-table__header">Provider</th>
-      <th scope="col" class="govuk-table__header"></th>
-    </tr>
-  </thead>
-  <tbody class="govuk-table__body">
-    <tr class="govuk-table__row">
+<h3 class="govuk-heading-m">Study materials</h3>
 
+<dl class="govuk-summary-list">
+  <div class="govuk-summary-list__row">
+  <dt class="govuk-summary-list__key">
+  Teacher 1
+  </dt>
+<dd class="govuk-summary-list__value">
+  <div>{{ data['full-name'] }}</div>
+  <div>{{ data['email-address'] }}</div>
+</dd>
+<dd class="govuk-summary-list__actions govuk-!-margin-2">
+<a href="/nqt1/it1/delete" class="govuk-!-margin-5">
+ Delete
+</a>
+<a href="/nqt1/it1/add-teachers" class="govuk-!-right-margin-5">
+ Change
+</a>
+</dd>
+</div>
+</dl>
 
-
-      <td class="govuk-table__cell">{{ data['material'] }}</td>
-
-      <td class="govuk-summary-list__actions govuk-!-margin-2">
-    <a href="/nqt1/it2/add-teachers" class="govuk-!-right-margin-5">
-       Change
-    </a>
-  </td
-    </tr>
-
-
-
-  </tbody>
-</table>
-
-<hr class="govuk-section-break govuk-section-break--l">
 
 <h3 class="govuk-heading-m">Teacher details</h3>
 
@@ -69,22 +79,7 @@
 
       <td class="govuk-table__cell">{{ data['full-name'] }}</td>
       <td class="govuk-table__cell">{{ data['email-address'] }}</td>
-      <td class="govuk-summary-list__actions govuk-!-width-one-quarter">
-    <a href="/nqt1/it2/delete" class="govuk-!-margin-5">
-       Delete
-    </a>
-    <a href="/nqt1/it2/add-teachers" class="govuk-!-right-margin-5">
-       Change
-    </a>
-  </td
-    </tr>
-    <tr class="govuk-table__row">
-
-
-
-      <td class="govuk-table__cell">{{ data['full-name-extra'] }}</td>
-      <td class="govuk-table__cell">{{ data['email-address-extra'] }}</td>
-      <td class="govuk-summary-list__actions govuk-!-width-one-quarter">
+      <td class="govuk-summary-list__actions govuk-!-margin-2">
     <a href="/nqt1/it2/delete" class="govuk-!-margin-5">
        Delete
     </a>

@@ -49,43 +49,31 @@
 
 <hr class="govuk-section-break govuk-section-break--l">
 
+
+
 <h3 class="govuk-heading-m">Teacher details</h3>
 
-      <table class="govuk-table">
 
-  <thead class="govuk-table__head">
-    <tr class="govuk-table__row">
-      <th scope="col" class="govuk-table__header">Name</th>
-      <th scope="col" class="govuk-table__header">Email address</th>
-      <th scope="col" class="govuk-table__header"></th>
-    </tr>
-  </thead>
+                  <table class="govuk-table govuk-!-margin-bottom-9">
+                  				<thead class="govuk-table__head">
+                  					<tr class="govuk-table__row">
+                  						<th class="govuk-table__header " scope="col">Full name</th>
+                  						<th class="govuk-table__header govuk-!-width-one-half" scope="col">Email address</th>
+                  						<th class="govuk-table__header govuk-!-width-one-quarter" scope="col"></th>
+                  					</tr>
+                  				</thead>
+                  				<tbody class="govuk-table__body">
+                  					<tr class="govuk-table__row">
 
-
-  <tbody class="govuk-table__body">
-    <tr class="govuk-table__row">
-
-
-
-      <td class="govuk-table__cell">{{ data['full-name'] }}</td>
-      <td class="govuk-table__cell">{{ data['email-address'] }}</td>
-      <td class="govuk-summary-list__actions govuk-!-width-one-quarter">
-    <a href="/nqt1/it2/delete" class="govuk-!-margin-5">
-       Delete
-    </a>
-    <a href="/nqt1/it2/add-teachers" class="govuk-!-right-margin-5">
-       Change
-    </a>
-  </td
-    </tr>
-
-
-
-  </tbody>
-</table>
-
-
-
+                  						<td class="govuk-table__cell">Dominique Sherwood</td>
+                  						<td class="govuk-table__cell">{{ data['email-address'] }}</td>
+                  						<td class="govuk-table__cell govuk-table__cell--numeric"><a href="/nqt1/it2/delete" class="govuk-!-margin-5">
+                                 Delete</a><a href="/nqt1/it2/add-teachers" class="govuk-!-right-margin-5">
+                                    Change
+                                 </a></td>
+                  					</tr>
+                  				</tbody>
+                  			</table>
 
 
 

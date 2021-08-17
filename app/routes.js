@@ -128,6 +128,16 @@ router.post('/guidance-question-answer-dev', function (req, res) {
   }
 })
 
+router.post('/guidance-question-answer-nqt', function (req, res) {
+  const readGuidance = req.session.data['read-guidance']
+
+  if (readGuidance === "yes") {
+    res.redirect('/nqt1-teachers/it1/ucl/guidance')
+  } else {
+    res.redirect('/nqt1-teachers/it1/ucl/module-list')
+  }
+})
+
 
 
 module.exports = router

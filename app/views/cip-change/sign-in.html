@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+<a class="govuk-back-link" href="/dev/start">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-xl">Sign in</h1>
+
+    <form class="form" action="/cip-change/tf/home" method="post">
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="email">
+          Email address
+        </label>
+        <hint class="govuk-hint" for="email">
+          This is the email address your school used when they created your account
+        </hint>
+        <input class="govuk-input govuk-!-width-two-thirds" id="email" name="email" type="text">
+      </div>
+      <br>
+
+      <button class="govuk-button" data-module="govuk-button">Continue</button>
+    </form>
+  </div>
+</div>
+
+{% endblock %}

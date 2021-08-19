@@ -138,6 +138,19 @@ router.post('/guidance-question-answer-nqt', function (req, res) {
   }
 })
 
+router.post('/nqt1/it3/add-teachers', function (req, res) {
+  const material = req.session.data['material']
+
+  if (!material) {
+    res.redirect('/nqt1/it3/choose-error')
+  } else {
+    res.redirect('/nqt1/it3/add-teachers')
+  }
+})
+
+
+
+
 
 
 module.exports = router

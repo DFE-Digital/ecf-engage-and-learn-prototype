@@ -20,10 +20,10 @@
       <div class="govuk-error-summary__body">
       <ul class="govuk-list govuk-error-summary__list">
         <li>
-          <a href="#full-name">Enter a full name</a>
+          <a href="#full-name">Enter the forename and surname for your teacher</a>
         </li>
         <li>
-          <a href="#email-address">Enter an email address</a>
+          <a href="#email-address">Enter an email address in the correct format, like name@school.org</a>
         </li>
       </ul>
       </div>
@@ -53,7 +53,7 @@
             Full name
           </label>
           <span id="name-error" class="govuk-error-message">
-          <span class="govuk-visually-hidden">Error:</span>Enter the full name of your teacher</span>
+          <span class="govuk-visually-hidden">Error:</span>Enter the forename and surname for your teacher</span>
 
           <input class="govuk-input govuk-!-width-full govuk-input--error" id="full-name" name="full-name" type="text" aria-describedby="name-error" autocomplete="full-name" value="{{ data['full-name'] }}"></div>
 
@@ -65,7 +65,7 @@
               You can use their work or personal email address
             </div>
             <span id="name-error" class="govuk-error-message">
-            <span class="govuk-visually-hidden">Error:</span>Enter an email address for your teacher</span>
+            <span class="govuk-visually-hidden">Error:</span>Enter an email address in the correct format, like name@school.org</span>
           <input class="govuk-input govuk-!-width-full govuk-input--error" id="email-address" name="email-address" type="text" aria-describedby="email-error" autocomplete="email-address" value="{{ data['email-address'] }} "></div>
 
 

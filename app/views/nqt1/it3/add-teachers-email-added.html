@@ -20,10 +20,7 @@
       <div class="govuk-error-summary__body">
       <ul class="govuk-list govuk-error-summary__list">
         <li>
-          <a href="#full-name">Enter a full name</a>
-        </li>
-        <li>
-          <a href="#email-address">Enter an email address</a>
+          <a href="#email-address">The email address {{ data['email-address'] }} has already been added</a>
         </li>
       </ul>
       </div>
@@ -45,19 +42,16 @@
 
   <form class="form" action="/nqt1/it3/check" method="post">
 
-    <div class="govuk-form-group govuk-form-group--error">
+    <div class="govuk-form-group">
       <fieldset class="govuk-fieldset">
 
-        <div class="govuk-form-group">
-          <label class="govuk-label" for="full-name">
-            Full name
-          </label>
-          <span id="name-error" class="govuk-error-message">
-          <span class="govuk-visually-hidden">Error:</span>Enter the full name of your teacher</span>
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="full-name">
+              Full name
+            </label>
+            <input class="govuk-input govuk-!-width-full" id="full-name" name="full-name" type="text" autocomplete="full-name" value="{{ data['full-name'] }}"></div>
 
-          <input class="govuk-input govuk-!-width-full govuk-input--error" id="full-name" name="full-name" type="text" aria-describedby="name-error" autocomplete="full-name" value="{{ data['full-name'] }}"></div>
-
-        <div class="govuk-form-group">
+        <div class="govuk-form-group govuk-form-group--error">
           <label class="govuk-label" for="email-address">
             Email address
           </label>
@@ -65,7 +59,7 @@
               You can use their work or personal email address
             </div>
             <span id="name-error" class="govuk-error-message">
-            <span class="govuk-visually-hidden">Error:</span>Enter an email address for your teacher</span>
+            <span class="govuk-visually-hidden">Error:</span>This email address has already been added</span>
           <input class="govuk-input govuk-!-width-full govuk-input--error" id="email-address" name="email-address" type="text" aria-describedby="email-error" autocomplete="email-address" value="{{ data['email-address'] }} "></div>
 
 

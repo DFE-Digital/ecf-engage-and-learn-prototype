@@ -1,0 +1,48 @@
+{% extends "layout_dev.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+<a class="govuk-back-link" href="/url/of/previous/page">Back</a>
+{% endblock %}
+
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-xl govuk-!-margin-top-4 govuk-!-margin-bottom-8">Before you start, read about the help available to you over the next academic year </h1>
+
+    <form class="form" action="/nqt1-teachers/it2/guidance" method="post">
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <div class="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="read-guidance" name="read-guidance" type="radio" value="yes">
+              <label class="govuk-label govuk-radios__label" for="read-guidance">
+                Yes, that would be useful
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="read-guidance-2" name="read-guidance" type="radio" value="no">
+              <label class="govuk-label govuk-radios__label" for="read-guidance-2">
+                No, I already know what to expect
+              </label>
+            </div>
+          </div>
+
+        </fieldset>
+      </div>
+
+      <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+    </form>
+
+  </div>
+</div>
+
+{% endblock %}
